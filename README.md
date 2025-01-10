@@ -1,4 +1,4 @@
-# AnimeGAN Pytorch <a href="https://colab.research.google.com/github/Affog7/Gan-anim/blob/main/notebooks/nb_animeGAN.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg"></a>
+# AnimeGAN Pytorch <a href="https://colab.research.google.com/github/Affog7/Gan-anim/blob/main/notebooks/animeGAN.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" data-canonical-src="https://colab.research.google.com/assets/colab-badge.svg"></a>
 
 
 
