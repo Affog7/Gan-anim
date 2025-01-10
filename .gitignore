@@ -12,6 +12,6 @@ tmp
 zip_code*
 test.ipynb
 inference_images/
-*.mp4
+
 ./*.jpg
 *.pt
