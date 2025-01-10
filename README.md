@@ -26,10 +26,12 @@ AnimeGAN is a deep learning model for transforming real-life photos into anime-s
     ```bash
     pip install -r requirements.txt
 
+3. Dataset utilisé pour l'entrainement et test: 
+  https://github.com/ptran1203/pytorch-animeGAN/releases/download/v1.0/dataset_v1.zip
 
 
 
-3. USAGE 
+## USAGE 
 
 * Training
     ```bash
@@ -70,3 +72,19 @@ AnimeGAN is a deep learning model for transforming real-life photos into anime-s
                                 --dest /path/to/output/video.mp4
 
                         
+## Resultats
+
+* Image vs Images animées
+
+    <img src="./results/image.png"/>
+
+* Video Animée
+
+    <a href="./Video/giphy.mp4"> Vidéo originale </a>
+    <a href="./results/test_vid_3_anime.mp4"> Vidéo animée </a>
+
+* Modèle généré
+
+    <a href="/Models_genere/GeneratorV2_train_photo_Hayao.pt"> train_photo_Hayao </a>
+    <a href="/Models_genere/discriminator_train_photo_Hayao.pt"> discriminator_train_photo_Hayao </a>
+    <a href="/Models_genere/GeneratorV2_train_photo_Hayao_init.pt"> GeneratorV2_train_photo_Hayao_init </a>
