@@ -86,8 +86,44 @@ AnimeGAN is a deep learning model for transforming real-life photos into anime-s
 
 * Modèle généré
 
-    <a href="/Models_genere/GeneratorV2_train_photo_Hayao.pt"> train_photo_Hayao </a> 
+    * <a href="/Models_genere/GeneratorV2_train_photo_Hayao.pt"> train_photo_Hayao </a> 
     
-    <a href="/Models_genere/discriminator_train_photo_Hayao.pt"> discriminator_train_photo_Hayao </a> 
+    * <a href="/Models_genere/discriminator_train_photo_Hayao.pt"> discriminator_train_photo_Hayao </a> 
 
-    <a href="/Models_genere/GeneratorV2_train_photo_Hayao_init.pt"> GeneratorV2_train_photo_Hayao_init </a>
+    * <a href="/Models_genere/GeneratorV2_train_photo_Hayao_init.pt"> GeneratorV2_train_photo_Hayao_init </a>
+
+
+
+## Explication du Choix des Modèles
+
+Dans AnimeGAN, les modèles utilisés sont des **Réseaux Antagonistes Génératifs (GANs)**, qui sont particulièrement efficaces pour les tâches de transformation d'images, comme la conversion de photos réalistes en images de style anime. Voici les détails des choix des modèles :
+
+### 1.  <a href="/Models_genere/GeneratorV2_train_photo_Hayao_init.pt"> Générateur (GeneratorV2)  </a>
+
+Le générateur est responsable de créer des images de style anime à partir de photos réalistes. Plusieurs choix architecturaux ont été faits pour garantir la qualité des images générées :
+
+- **Architecture Convolutionnelle Profonde** : Permet de capturer les détails complexes nécessaires pour la transformation des caractéristiques réalistes en style anime.
+- **Residual Blocks** : Ces blocs résiduels facilitent l'apprentissage des transformations complexes tout en conservant les détails de l'image d'entrée, ce qui est crucial pour maintenir la structure de l'image originale.
+- **Instance Normalization** : Cette normalisation est souvent utilisée dans les tâches de transfert de style, car elle aide à adapter efficacement le style visuel entre les images.
+
+### 2.     <a href="/Models_genere/discriminator_train_photo_Hayao.pt"> Discriminateur (Discriminator)</a> 
+
+
+Le discriminateur a pour tâche de distinguer les images générées des images réelles de style anime. Voici pourquoi certains choix ont été faits :
+
+- **PatchGAN** : L'architecture PatchGAN évalue les images par petits patchs ou régions, ce qui permet une évaluation locale de la qualité des textures, aidant à générer des images plus détaillées et cohérentes.
+- **Spectral Normalization** : Cette technique est utilisée pour stabiliser l'entraînement du discriminateur, en évitant les gradients excessifs qui pourraient déséquilibrer l'apprentissage.
+
+### 3. Perte de GAN (GAN Loss)
+
+Le choix de la **perte LSGAN (Least Squares GAN)**, au lieu de la perte classique de GAN, a plusieurs avantages :
+
+- **Stabilité de l'entraînement** : La perte LSGAN atténue les problèmes de gradients instables, ce qui conduit à un entraînement plus stable et rapide.
+- **Qualité des images générées** : Cette perte pousse le générateur à produire des images plus réalistes, améliorant la qualité du style anime.
+
+### 4. Réglages des Hyperparamètres
+
+- **Learning Rates Différents pour Générateur et Discriminateur** : Les taux d'apprentissage du générateur (`lr_g`) et du discriminateur (`lr_d`) sont ajustés différemment pour optimiser la convergence de chaque modèle.
+- **Poids des différentes pertes (`wadvd`, `wadvg`, `wcon`, etc.)** : Ces hyperparamètres définissent l'importance relative des différentes composantes de la perte (adversaire, contenu, etc.), permettant un équilibre entre la qualité visuelle, la préservation du contenu et l'application du style.
+
+En résumé, chaque choix architectural et paramétrique vise à maximiser l'efficacité de la transformation d'images réalistes en images stylisées tout en maintenant la stabilité et la qualité de l'entraînement.
