@@ -121,9 +121,9 @@ En résumé, chaque choix architectural et paramétrique vise à maximiser l'eff
 
 * Video Animée
 
-    <a href="./Video/giphy.mp4"> Vidéo originale </a> 
+    * <a href="./Video/giphy.mp4"> Vidéo originale </a> 
 
-    <a href="./results/test_vid_3_anime.mp4"> Vidéo animée </a>
+    * <a href="./results/test_vid_3_anime.mp4"> Vidéo animée </a>
 
 * Modèle généré
 
