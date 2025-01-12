@@ -2,8 +2,9 @@
 
 Dans AnimeGAN, les modèles utilisés sont des **Réseaux Antagonistes Génératifs (GANs)**, qui sont particulièrement efficaces pour les tâches de transformation d'images, comme la conversion de photos réalistes en images de style anime. Voici les détails des choix des modèles :
 
-> **Note :** Tout le code présenté ici est exécutable sur [Google Colab](https://colab.research.google.com), ce qui permet d'utiliser facilement des GPU pour accélérer l'entraînement et l'inférence.
+> **Note :** Tout le code présenté ici est exécutable sur [Google Colab](https://colab.research.google.com/github/Affog7/Gan-anim/blob/main/notebooks/animeGAN.ipynb), ce qui permet d'utiliser facilement des GPU pour accélérer l'entraînement et l'inférence.
 
+> **NoteBook :** [Notebook](https://github.com/Affog7/Gan-anim/blob/main/notebooks/animeGAN.ipynb)
 
 # AnimeGAN
 
