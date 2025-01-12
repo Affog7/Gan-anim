@@ -99,7 +99,7 @@ En résumé, chaque choix architectural et paramétrique vise à maximiser l'eff
   
      *  Image
    
-       ```bash
+        
        python3 inference_image.py --checkpoint /path/to/model.pt\
                                --src /path/to/input/images\
                                --dest /path/to/output/images
@@ -107,10 +107,10 @@ En résumé, chaque choix architectural et paramétrique vise à maximiser l'eff
    
     *  Video
    
-           ```bash
-           python3 inference_video.py --checkpoint /path/to/model.pt\
-                                   --src /path/to/input/video.mp4\
-                                   --dest /path/to/output/video.mp4
+        ```bash
+        python3 inference_video.py --checkpoint /path/to/model.pt\
+                                --src /path/to/input/video.mp4\
+                                --dest /path/to/output/video.mp4
 
                         
 ## Resultats
